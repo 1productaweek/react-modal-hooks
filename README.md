@@ -58,7 +58,7 @@ import MyModal from '...'
 function AnyComponent ({ onCancel, onDone }) {
   const showModal = useModal(MyModal)
 
-  const onPaymentHandler = () => {
+  const onPaymentHandler = async () => {
     // paymentDetails is any value that you passed to the onDone() callback
     const paymentDetails = await showModal({ ...propsToPassToModal })
     alert(`You paid with ${paymentDetails}`)
