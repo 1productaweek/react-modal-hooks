@@ -8,8 +8,8 @@ export interface ModalPromise<T> extends Promise<T> {
   id: number
 }
 
-export interface ModalProps {
-  onDone: () => void
+export interface ModalProps<T = any> {
+  onDone: (resolved?: T) => void
   onCancel: () => void
 }
 
