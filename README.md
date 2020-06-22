@@ -4,7 +4,9 @@ Simple library to help loading modals in a more async way, and auto cleans up mo
 
 ## Usage
 
-1. **Add the modal provider** to the root of your app (you can add it multiple times, but there is no need).
+### Step 1 - Add the modal provider
+
+Add the modal provider to the root of your app (you can add it multiple times, but there is no need).
 
 ```jsx
 
@@ -15,8 +17,10 @@ import { ModalProvider } from '@1productaweek/react-modal-hooks'
 </ModalProvider>
 ```
 
-2. **Create your custom modal** (or use a library e.g. [react-modal](https://github.com/reactjs/react-modal)). The following props
-will be injected into your modal component:
+### Step 2 - Create a modal
+
+Create a custom modal (or use a library e.g. [react-modal](https://github.com/reactjs/react-modal)). The following props
+will be injected into your modal component when you open it:
 
   * onDone(resolvedValue?: any) - close the modal and optionally return a value to the calling handler
   * onCancel() - close the modal, by rejecting the promise
@@ -43,7 +47,8 @@ function MyModal ({ onCancel, onDone }) {
 }
 ```
 
-3. **Open the modal** and wait for the resolved value using hooks.
+### Step 2 - Open modal with hooks
+Open the modal and wait for the resolved value using hooks.
 
 ```jsx
 import React from 'react'
