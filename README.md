@@ -12,7 +12,7 @@ Add the modal provider to the root of your app (you can add it multiple times, b
 
 import { ModalProvider } from '@1productaweek/react-modal-hooks'
 
-<ModalProvider>
+<ModalProvider usePortal>
   ...
 </ModalProvider>
 ```
