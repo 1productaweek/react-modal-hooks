@@ -1,5 +1,5 @@
 {
-  "name": "@1productaweek/npm-starter",
+  "name": "@1productaweek/react-modal-hooks",
   "version": "0.1.0",
   "description": "NPM starter package.",
   "main": "dist/index.js",
