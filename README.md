@@ -22,8 +22,8 @@ import { ModalProvider } from '@1productaweek/react-modal-hooks'
 Create a custom modal (or use a library e.g. [react-modal](https://github.com/reactjs/react-modal)). The following props
 will be injected into your modal component when you open it:
 
-  * onDone(resolvedValue?: any) - close the modal and optionally return a value to the calling handler
-  * onCancel() - close the modal, by rejecting the promise
+  * `onDone(resolvedValue?: any)` - close the modal and optionally return a value to the calling handler
+  * `onCancel()` - close the modal, by rejecting the promise
 
 NOTE: Make sure your component is always showing the modal, as this library will take care to unmount and hide the modal when it is no
 longer needed.
