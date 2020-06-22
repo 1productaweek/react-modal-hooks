@@ -13,7 +13,7 @@ export interface ModalProps {
   onCancel: () => void
 }
 
-export interface IStackItem {
+export interface ModalStackItem {
   id: number
   Component: React.ComponentType<any>
   props: any
@@ -22,7 +22,7 @@ export interface IStackItem {
 }
 
 export interface ModalProviderState {
-  stack: IStackItem[]
+  stack: ModalStackItem[]
 }
 
 export interface ModalProviderProps {
@@ -31,7 +31,7 @@ export interface ModalProviderProps {
 
 class ModalProvider extends React.Component<ModalProviderProps, ModalProviderState> {
   state = {
-    stack: [] as IStackItem[],
+    stack: [] as ModalStackItem[],
   }
 
   // Add a modal to the stack
