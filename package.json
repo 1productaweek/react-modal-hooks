@@ -1,6 +1,6 @@
 {
   "name": "@1productaweek/react-modal-hooks",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "NPM starter package.",
   "main": "dist/index.js",
   "scripts": {
