@@ -42,13 +42,13 @@
     "import/no-extraneous-dependencies": [ "error",
       { 
         "devDependencies": [
-          "**/*.test.js", 
-          "**/*.spec.js", 
-          "**/test/**/*.js", 
-          "**/__stories__/**/*.js", 
+          "**/*.test.*", 
+          "**/*.spec.*", 
+          "**/test/**/*", 
+          "**/__stories__/**/*.*", 
           "**/*.sb.*",
-          "config/*.js", 
-          "scripts/*.js"
+          "config/*.*", 
+          "scripts/*.*"
         ] 
       }
     ],
