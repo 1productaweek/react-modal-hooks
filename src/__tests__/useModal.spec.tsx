@@ -8,8 +8,9 @@ import ModalProvider from '../ModalProvider'
 describe('useModal.spec', () => {
   test('returns fn', () => {
     const wrapper = ({ children }: any) => <ModalProvider>{children}</ModalProvider>
-    const Modal = ({ a, onDone }: { a: string, onDone: () => void }) => <div>HelloWorld</div>
+    const Modal = ({ a, onDone }: { a: string, onDone: () => void, onCancel: () => void }) => <div>HelloWorld</div>
     const { result } = renderHook(() => useModal(Modal), { wrapper })
     expect(typeof result.current).toBe('function')
+    result.current({ a: 'hello world' })
   })
 })

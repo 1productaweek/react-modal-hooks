@@ -1,8 +1,10 @@
 import { useContext, useMemo } from 'react'
+
 import { ModalContext } from './ModalProvider'
 
 export interface ModalProps {
-  onDone: (prop: any) => void
+  onDone: (prop?: any) => void
+  onCancel?: () => void
 }
 
 const useModal = <T extends ModalProps>(Modal: React.ComponentType<T>) => {
@@ -12,7 +14,7 @@ const useModal = <T extends ModalProps>(Modal: React.ComponentType<T>) => {
   }
 
   return useMemo(() => {
-    const fn = (props: T): Promise<Parameters<T['onDone']>[0]> => modalProvider.push(Modal, props)
+    const fn = (props: Omit<T, 'onDone'|'onCancel'>): Promise<Parameters<T['onDone']>[0]> => modalProvider.push(Modal, props)
     fn.modalProvider = modalProvider
     return fn
   }, [Modal, modalProvider])
