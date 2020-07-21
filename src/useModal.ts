@@ -8,7 +8,7 @@ const useModal = <T>(Modal: React.ComponentType<T>) => {
   }
 
   return useMemo(() => {
-    const fn = (props?: any) => modalProvider.push(Modal, props)
+    const fn = (props: T) => modalProvider.push(Modal, props)
     fn.modalProvider = modalProvider
     return fn
   }, [Modal, modalProvider])
