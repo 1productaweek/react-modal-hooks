@@ -74,6 +74,7 @@ class ModalProvider extends React.Component<ModalProviderProps, ModalProviderSta
   }
 
   componentDidUpdate () {
+    if (!document) return
     if (!this.state.stack || this.state.stack.length === 0) {
       document.body.classList.remove('modal-provider-active')
     } else {
